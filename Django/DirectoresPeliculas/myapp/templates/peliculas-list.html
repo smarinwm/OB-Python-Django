@@ -1,0 +1,15 @@
+{% extends 'estructura/base.html' %}
+
+{% block content %}
+
+<div>
+  <ul>
+    {% for valor in peliculas_list %}
+    <li>
+      <a href="{% url 'peliculas-detalles' valor.id %}">{{ valor.titulo }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% endblock %}

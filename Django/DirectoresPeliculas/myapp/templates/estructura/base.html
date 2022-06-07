@@ -1,0 +1,32 @@
+{% load static %}
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet"/>
+    <title>Directores y Películas</title>
+</head>
+<body>
+<div class="col-lg-8 mx-auto p-3 py-md-5">
+    <header class="pt-5 my-5">
+        <h1> {{ titulo }} </h1>
+    </header>
+    <main>
+
+        <h2> {{ seccion }} </h2>
+        <p class="fs-5 col-md-8">
+            {% block content %}
+            {% endblock %}
+        </p>
+
+        <p>
+            <a href="{% url 'index' %}">Inicio.</a>
+        </p>
+
+    </main>
+    <footer class="pt-5 my-5 text-muted border-top">
+        Created by Silverio Marín &middot; &copy; 2022
+    </footer>
+</div>
+</body>
+</html>

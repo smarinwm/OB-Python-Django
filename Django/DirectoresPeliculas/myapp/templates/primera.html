@@ -1,0 +1,18 @@
+{% extends 'estructura/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div>
+    <ul>
+        <li>
+            <a href="{% url 'directores-list' %}">Listado completo de los directores.</a>
+        </li>
+        <li>
+            <a href="{% url 'peliculas-list' %}">Listado completo de las películas.</a>
+        </li>
+    </ul>
+</div>
+
+{% endblock %}
